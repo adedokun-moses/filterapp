@@ -1,165 +1,163 @@
- import { defineStore } from 'pinia';
- 
+import { defineStore } from 'pinia';
+
 
 export const shapesDetails = defineStore('shapeDet', {
-   
+
     state: () => ({
-        data: [
-            {
-                "shapes": "Oval",
-                "color": "#ff0000",
-                "title": "Oval"
-            },
-            {
-                "shapes": "Round",
-                "color": "#0000ff",
-                "title": "Round"
-            },
-            {
-                "shapes": "Triangle",
-                "color": "#00ff00",
-                "title": "Triangle"
-            },
-            {
-                "shapes": "Square",
-                "color": "#ffff00",
-                "title": "Square"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#d3d3d3",
-                "title": "Rectangle"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#add8e6",
-                "title": "Rectangle"
-            },
-
-            {
-                "shapes": "Oval",
-                "color": "#ff0000",
-                "title": "Oval"
-            },
-            {
-                "shapes": "Round",
-                "color": "#0000ff",
-                "title": "Round"
-            },
-            {
-                "shapes": "Triangle",
-                "color": "#00ff00",
-                "title": "Triangle"
-            },
-            {
-                "shapes": "Square",
-                "color": "#ffff00",
-                "title": "Square"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#d3d3d3",
-                "title": "Rectangle"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#add8e6",
-                "title": "Rectangle"
-            },
-
-            {
-                "shapes": "Oval",
-                "color": "#ff0000",
-                "title": "Oval"
-            },
-            {
-                "shapes": "Round",
-                "color": "#0000ff",
-                "title": "Round"
-            },
-            {
-                "shapes": "Triangle",
-                "color": "#00ff00",
-                "title": "Triangle"
-            },
-            {
-                "shapes": "Square",
-                "color": "#ffff00",
-                "title": "Square"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#d3d3d3",
-                "title": "Rectangle"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#add8e6",
-                "title": "Rectangle"
-            },
-            {
-                "shapes": "Rectangle",
-                "color": "#add8e6",
-                "title": "Rectangle"
-            },
-
-
-
-        ]
-
         /*    data: [
                {
-                   "type": "circle",
-                   "radius": 10,
-                   "colors": [
-                       "red",
-                       "blue",
-                       "green"
-                   ]
+                   "shapes": "Oval",
+                   "color": "#ff0000",
+                   "title": "Oval",
+                   "color_name": "Red"
                },
                {
-                   "type": "square",
-                   "sideLength": 20,
-                   "colors": [
-                       "red",
-                       "blue",
-                       "green"
-                   ]
+                   "shapes": "Round",
+                   "color": "#0000ff",
+                   "title": "Round" ,
+                   "color_name": "Blue"
                },
                {
-                   "type": "triangle",
-                   "base": 15,
-                   "height": 10,
-                   "colors": [
-                       "red",
-                       "blue",
+                   "shapes": "Triangle",
+                   "color": "#00ff00",
+                   "title": "Triangle"
+               },
+               {
+                   "shapes": "Square",
+                   "color": "#ffff00",
+                   "title": "Square"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#d3d3d3",
+                   "title": "Rectangle"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#add8e6",
+                   "title": "Rectangle"
+               },
    
-                   ]
+               {
+                   "shapes": "Oval",
+                   "color": "#ff0000",
+                   "title": "Oval",
+                   "color_name": "Red"
+   
                },
                {
-                   "type": "square",
-                   "sideLength": 20,
-                   "colors": [
-                       "red",
-                       "green"
-   
-                   ]
+                   "shapes": "Round",
+                   "color": "#0000ff",
+                   "title": "Round"
                },
                {
-                   "type": "oval",
-                   "base": 15,
-                   "height": 10,
-                   "colors": [
-                       "blue",
-                       "green",
-                       "red",
-                       "blue",
-                       "green"
-                   ]
-               }
-           ],
+                   "shapes": "Triangle",
+                   "color": "#00ff00",
+                   "title": "Triangle"
+               },
+               {
+                   "shapes": "Square",
+                   "color": "#ffff00",
+                   "title": "Square"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#d3d3d3",
+                   "title": "Rectangle"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#add8e6",
+                   "title": "Rectangle"
+               },
    
-    */
+               {
+                   "shapes": "Oval",
+                   "color": "#ff0000",
+                   "title": "Oval",
+                   "color_name": "Red"
+               },
+               {
+                   "shapes": "Round",
+                   "color": "#0000ff",
+                   "title": "Round"
+               },
+               {
+                   "shapes": "Triangle",
+                   "color": "#00ff00",
+                   "title": "Triangle"
+               },
+               {
+                   "shapes": "Square",
+                   "color": "#ffff00",
+                   "title": "Square"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#d3d3d3",
+                   "title": "Rectangle"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#add8e6",
+                   "title": "Rectangle"
+               },
+               {
+                   "shapes": "Rectangle",
+                   "color": "#add8e6",
+                   "title": "Rectangle"
+               },
+   
+   
+   
+           ] */
+
+        data: [
+            {
+                "type": "circle",
+                "radius": 10,
+                "colors": [
+                    "red",
+                    "blue",
+                    "green"
+                ]
+            },
+            {
+                "type": "square",
+                "sideLength": 20,
+                "colors": [
+                    "red",
+                    "blue",
+                    "green"
+                ]
+            },
+            {
+                "type": "triangle",
+                "base": 15,
+                "height": 10,
+                "colors": [
+                    "red",
+                    "blue",
+                    "blue",
+                    "green"
+
+                ]
+            },
+            {
+                "type": "oval",
+                "base": 15,
+                "height": 10,
+                "colors": [
+                    "blue",
+                    "green",
+                    "red",
+                    "blue",
+                    "green"
+                ]
+            }
+        ],
+
+
 
     }),
     getters: {
@@ -171,10 +169,9 @@ export const shapesDetails = defineStore('shapeDet', {
     actions: {
         LOGOUT() {
             const router = useRouter()
-            console.log('working')
-            router.push('/sign')
+            router.push('/')
 
-          
+
         }
 
     },
