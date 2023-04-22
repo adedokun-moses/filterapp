@@ -10,7 +10,8 @@
                 <h4>Shapes {{ filterByColors }}</h4>
 
                 <div class="shape_style">
-                    <button v-for="btn in data" :key="btn.type" @click="setFilter(btn.type)">{{ btn.type }}</button>
+                    <button v-for="btn in data" :key="btn.type" @click="setFilter(btn.type)"
+                        :class="{ 'active': isActive(color) }">{{ btn.type }}</button>
                 </div>
 
                 <div class="color_tab">
@@ -20,7 +21,7 @@
                 </div>
 
                 <div class="shape_tab">
-                    <h5>All {{ shapeTitle }}{{ shape_colors }} Shapes In The Database {{ shape_colors.length }}</h5>
+                    <h5>All {{ shapeTitle }} Shapes In The Database {{ shape_colors.length }}</h5>
                     <div class="shapes">
                         <div v-for="color in shape_colors" :key="color">
                             <!--   {{ shape.type }} -->
@@ -66,6 +67,8 @@ const selectedColors = reactive([])
 const selectedShape = reactive([])
 let shapeTitle = reactive('All Items')
 const colors = reactive(["red", "blue", "green", "yellow"]);
+const activeFilters = ref(['red']) 
+
 
 const store = shapesDetails();
 const data = computed(() => {
@@ -82,21 +85,6 @@ const shape_colors = computed(() => {
 });
 
 
-/* const filterByColors = computed((color = "") => {
-    //alert(color)
-    if (selectedColors.length === 0) {
-        return filteredTasks;
-    } else {
-        //return state.selectedShape = filteredTasks.value.filter(item => item.color_name == color)
-
-        return filteredTasks.value.filter(item => {
-            if (item.color_name == color) {
-                return selectedShape.includes(item.color_name);
-            }
-        });
-    }
-})
- */
 // Define a computed property to filter the tasks
 const filteredTasks = computed(() => {
 
@@ -198,7 +186,7 @@ const setFilterColor = (check_color) => {
     data.value.forEach(shape => {
         if (shape.colors.includes('red')) {
             //selectedColors.splice(0, selectedColors.length, ...shape);
-            
+
             selectedColors.push(shape.colors[0])
         }
     })
@@ -217,6 +205,9 @@ const setFilterColor = (check_color) => {
 const logOut = () => {
     return store.LOGOUT()
 }
+function isActive(color) {
+    return activeFilters.value.includes(color)
+}
 
 </script>
 
@@ -233,10 +224,9 @@ const logOut = () => {
 }
 
 .container {
-    width: 100%;
     background: grey;
     min-height: 500px;
-    margin: 0px;
+   
 
 }
 

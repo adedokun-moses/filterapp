@@ -111,7 +111,8 @@ export const shapesDetails = defineStore('shapeDet', {
    
    
            ] */
-
+        username: "kredistaff",
+        password: "kredistaff123",
         data: [
             {
                 "type": "circle",
@@ -159,6 +160,7 @@ export const shapesDetails = defineStore('shapeDet', {
 
 
 
+
     }),
     getters: {
         getShape(state) {
@@ -170,8 +172,10 @@ export const shapesDetails = defineStore('shapeDet', {
         LOGOUT() {
             const router = useRouter()
             router.push('/')
-
-
+        },
+        LOGIN() {
+            const router = useRouter()
+            router.push('/dash')
         }
 
     },
