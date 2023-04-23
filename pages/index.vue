@@ -29,7 +29,7 @@ const password = ref("")
 
 const handleLogin = () => {
 
-     if (username.value == "" || password.value == "") {
+    if (username.value == "" || password.value == "") {
         alert("Input Username and Password")
         return false
     }
@@ -40,10 +40,10 @@ const handleLogin = () => {
     if (password.value != "kredistaff123") {
         alert("Password Not Correct")
         return false
-    }  
-    
+    }
+
     return store.LOGIN()
- 
+
 }
 
 
@@ -103,5 +103,30 @@ form p {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 80%;
+        margin: 4rem auto 0px auto;
+        height: 400px;
+        background: gold;
+        border-radius: 20px;
+    }
+
+    .formgroup button {
+        display: block;
+        width: 80%;
+        margin: 10px auto 0px auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+
 }
 </style>
